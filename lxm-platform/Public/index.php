@@ -16,11 +16,14 @@ if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
 
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
 define('APP_DEBUG',True);
+define('BUILD_DIR_SECURE', false);
 
 // 定义应用目录
 define('APP_PATH',dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'Application'.DIRECTORY_SEPARATOR);
-
+//模板目录
+define('TMPL_PATH',dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'Template'.DIRECTORY_SEPARATOR);
+//系统运行时目录
+define('RUNTIME_PATH',dirname(dirname(__FILE__)).DIRECTORY_SEPARATOR.'Runtime'.DIRECTORY_SEPARATOR);
 // 引入ThinkPHP入口文件
 require dirname(dirname(dirname(__FILE__))).DIRECTORY_SEPARATOR.'ThinkPHP'.DIRECTORY_SEPARATOR.'ThinkPHP.php';
-
 // 亲^_^ 后面不需要任何代码了 就是如此简单
